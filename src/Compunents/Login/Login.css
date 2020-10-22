@@ -1,0 +1,20 @@
+.login{
+    margin:auto;
+}
+.login-btn{
+    padding: 10px 5px;
+    border: 1px solid;
+    border-radius: 50vh;
+    margin: 30px 0px;
+}
+.login-area{
+    background:#e6e6e6;
+    padding: 27px;
+    border-radius:20px;
+    margin-top:30px;
+}
+/* .login-btn{
+    border: 1px solid black;
+    border-radius: 39px;
+    padding: 5px 5px;
+} */
