@@ -6,7 +6,6 @@ import SearchBar from '../SearchBar/SearchBar';
 const Home = () => {
     return (
         <div className='container'>
-            <Header></Header>
             <SearchBar></SearchBar>
             <Events></Events>
         </div>

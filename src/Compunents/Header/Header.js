@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import logo from '../../volunteer-network-main/logos/Group 1329.png';
 import './Header.css'
 
 const Header = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+
+    console.log(loggedInUser.name)
     return (
         <div className='container'>
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -27,7 +31,10 @@ const Header = () => {
                             <Link className="nav-link font-weight-bold" to="/blog">Blog</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="btn btn-primary nav-link text-white px-3 font-weight-bold" to="/register">Register</Link>
+                            {
+                                loggedInUser.isSignedIn ? <Link className="btn btn-primary nav-link text-white px-3 font-weight-bold" to="/profile">{loggedInUser.name}</Link> : <Link className="btn btn-primary nav-link text-white px-3 font-weight-bold" to="/register">Register</Link>
+                            }
+
                         </li>
                         <li className="nav-item ml-2">
                             <Link className="btn btn-dark nav-link text-white px-3 font-weight-bold" to="/admin">Admin</Link>
