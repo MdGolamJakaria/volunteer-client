@@ -16,7 +16,7 @@ const Register = () => {
     console.log(eventByKey)
 
     useEffect(() => {
-        fetch("http://localhost:5000/event/" + id)
+        fetch("https://limitless-mountain-16648.herokuapp.com/event/" + id)
             .then(res => res.json())
             .then(data => {
                 setEventByKey(data)
@@ -24,7 +24,7 @@ const Register = () => {
     }, [])
 
     const onSubmit = data => {
-        fetch('http://localhost:5000/addUsers', {
+        fetch('https://limitless-mountain-16648.herokuapp.com/addUsers', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
