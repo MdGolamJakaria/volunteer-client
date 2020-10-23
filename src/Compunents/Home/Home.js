@@ -7,6 +7,8 @@ const Home = () => {
     return (
         <div className='container'>
             <SearchBar></SearchBar>
+            <br />
+            <br />
             <Events></Events>
         </div>
     );
